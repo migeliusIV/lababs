@@ -5,8 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 set(project "Lababa7")
 project (${project})
-set(MY_PROJECT_VERSION 1.0.0)
-message("Version: ${MY_PROJECT_VERSION}")
+#set(MY_PROJECT_VERSION 1.0.0)
+#message("Version: ${MY_PROJECT_VERSION}")
 
 set(CMAKE_CXX_STANDARD 11)
 
