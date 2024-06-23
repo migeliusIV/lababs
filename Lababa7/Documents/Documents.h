@@ -18,17 +18,6 @@ namespace DOCS {
 		Document(char*, char*, char*);
 		Document(const Document&); //copy
 		virtual ~Document();
-
-		/*char* GetBuyer();
-		char* GetSeller();
-		char* GetProduct();
-		void SetBuer(char*);
-		void SetSeller(char*);
-		void SetProduct(char*);*/
-
-		//operators
-		//std::ostream operator=(const Document&);
-		
 		virtual void Show() = 0;
 	};
 
@@ -38,8 +27,6 @@ namespace DOCS {
 	public:
 		Cheque();
 		Cheque(char*, char*, char*, unsigned short);
-		/*int GetCost();
-		void SetCost(int);*/
 		virtual ~Cheque();
 		virtual void Show();
 	};

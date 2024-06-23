@@ -36,19 +36,14 @@ namespace DOCS {
 	}
 
 	Cheque::~Cheque(){
-		//delete &cost;
 		std::cout << "~Cheque()" << std::endl;
 	};
 
 	Receipt::~Receipt(){
-		//delete &status; почему здесь не нужно такое удаление, если этот компонент хранится в куче
 		std::cout << "~Receipt()" << std::endl;
 	};
 
 	Invoice::~Invoice() {
-		/*delete[] seller;
-		delete[] buyer;
-		delete[] product;*/
 		delete[] city;
 		std::cout << "~Invoice()" << std::endl;
 	}
@@ -83,18 +78,18 @@ namespace DOCS {
 	
 	void Document::BaseInfo() {
 		std::cout << "Seller: ";
-		for (char* i = seller; i < seller + strlen(seller); i++)
-			std::cout << &seller;
+		for (int i = 0; i < strlen(seller); i++)
+			std::cout << seller[i];
 		std::cout << std::endl;
 
 		std::cout << "Buyer: ";
-		for (char* i = buyer; i < buyer + strlen(buyer); i++)
-			std::cout << &buyer;
+		for (int i = 0; i < strlen(buyer); i++)
+			std::cout << buyer[i];
 		std::cout << std::endl;
 
 		std::cout << "Product: ";
 		for (char* i = product; i < product + strlen(product); i++)
-			std::cout << &product;
+			std::cout << *i;
 		std::cout << std::endl;
 	}
 
@@ -107,7 +102,7 @@ namespace DOCS {
 		BaseInfo();
 		std::cout << "Location: ";
 		for (char* i = city; i < city + strlen(city); i++)
-			std::cout << &city;
+			std::cout << *i;
 		std::cout << std::endl;
 	}
 

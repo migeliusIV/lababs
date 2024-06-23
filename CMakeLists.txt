@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("Cmake laboratory works")
-set(MY_PROJECT_VERSION 2.0.0)
+set(MY_PROJECT_VERSION 3.0.0)
 message("Version: ${MY_PROJECT_VERSION}")
 
 set(CMAKE_CXX_STANDARD 11)
@@ -17,9 +17,9 @@ endif()
 
 
 # Включите подпроекты.
-#add_subdirectory ("Lababa7")
+add_subdirectory ("Lababa7")
 #add_subdirectory ("Lababa4")
-add_subdirectory ("Lababa8")
+#add_subdirectory ("Lababa8")
 
 #silly var: $ git commit -m"Fix typo in introduction to user guide"
 #pro: git commit -m "the subject" -m "the first line"$'\n'"the second line"$'\n'"the third line"
